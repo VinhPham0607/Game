@@ -11,6 +11,7 @@
 #include <algorithm>
 #include <windows.h>
 
+#include "showFull.h"
 #include "generate.h"
 
 // Screen dimension constants
@@ -68,7 +69,7 @@ bool init()
 		}
 
 		// Create window
-		gWindow = SDL_CreateWindow("Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+		gWindow = SDL_CreateWindow("Finding Star", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 		if (gWindow == NULL)
 		{
 			printf("Window could not be created! SDL Error: %s\n", SDL_GetError());
@@ -114,19 +115,19 @@ bool loadMedia()
 	// Loading success flag
 	bool success = true;
 
-	gScratch = Mix_LoadWAV("");
+	gScratch = Mix_LoadWAV("assets/background.mp3");
 	if (gScratch == NULL)
 	{
 		printf("Failed to load scratch sound effect! SDL_mixer Error: %s\n", Mix_GetError());
 		success = false;
 	}
-	gGameOver = Mix_LoadWAV("");
+	gGameOver = Mix_LoadWAV("assets/game-over.wav");
 	if (gGameOver == NULL)
 	{
 		printf("Failed to load scratch sound effect! SDL_mixer Error: %s\n", Mix_GetError());
 		success = false;
 	}
-	gWinner = Mix_LoadWAV("");
+	gWinner = Mix_LoadWAV("assets/winners.wav");
 	if (gScratch == NULL)
 	{
 		printf("Failed to load scratch sound effect! SDL_mixer Error: %s\n", Mix_GetError());
@@ -134,43 +135,43 @@ bool loadMedia()
 	}
 
 	// Load texture
-	gStartMenu = loadTexture("");
+	gStartMenu = loadTexture("assets/start-menu.png");
 	if (gStartMenu == NULL)
 	{
 		printf("Failed to load texture image!\n");
 		success = false;
 	}
-	gTextureBox = loadTexture("");
+	gTextureBox = loadTexture("assets/box.png");
 	if (gTextureBox == NULL)
 	{
 		printf("Failed to load texture image!\n");
 		success = false;
 	}
-	gTextureMar = loadTexture("");
+	gTextureMar = loadTexture("assets/star.png");
 	if (gTextureMar == NULL)
 	{
 		printf("Failed to load texture image!\n");
 		success = false;
 	}
-	gTextureGalaxy = loadTexture("");
+	gTextureGalaxy = loadTexture("assets/background.png");
 	if (gTextureGalaxy == NULL)
 	{
 		printf("Failed to load texture image!\n");
 		success = false;
 	}
-	gTextureCongrats = loadTexture("");
+	gTextureCongrats = loadTexture("assets/winners.png");
 	if (gTextureCongrats == NULL)
 	{
 		printf("Failed to load texture image!\n");
 		success = false;
 	}
-	gTextureLevelup = loadTexture("");
+	gTextureLevelup = loadTexture("assets/level-up.png");
 	if (gTextureLevelup == NULL)
 	{
 		printf("Failed to load texture image!\n");
 		success = false;
 	}
-	gTextureGameOver = loadTexture("");
+	gTextureGameOver = loadTexture("assets/game-over.png");
 	if (gTextureGameOver == NULL)
 	{
 		printf("Failed to load texture image!\n");

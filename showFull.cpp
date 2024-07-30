@@ -25,8 +25,6 @@ void showStartMenu(SDL_Renderer *gRenderer, SDL_Texture *gStartMenu)
 void showFullTable(SDL_Renderer *gRenderer, SDL_Texture *gTextureBox, SDL_Texture *gTextureGalaxy,
                    int *arr, int n)
 {
-    // code render
-
     // Clear screen
     SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
     SDL_RenderClear(gRenderer);
