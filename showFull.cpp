@@ -266,8 +266,8 @@ void showResult(SDL_Renderer *gRenderer, SDL_Texture *gTextureBox, SDL_Texture *
 
 void showWinner(SDL_Renderer *gRenderer, SDL_Texture *gTextureCongrats)
 {
-    const int startw = 700;
-    const int starth = 365;
+    const int startw = 800;
+    const int starth = 600;
     for (int i = 0; i < 10; i++)
     {
         SDL_Rect viewport;

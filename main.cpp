@@ -249,10 +249,71 @@ int main(int argc, char *args[])
 	int bombLocatX[numberOfBomb], bombLocatY[numberOfBomb];
 	int *table;
 	int tmp = 2;
+
+	// Start up SDL and create window
+	if (!init())
+	{
+		printf("Failed to initialize!\n");
+	}
+	else
+	{
+		// Load media
+		if (!loadMedia())
+		{
+			printf("Failed to load media!\n");
+		}
+		else
+		{
+			bool quit = false;
+			bool startGame = false;
+			bool gameover = false;
+			SDL_Event e;
+
+			while (!quit)
+			{
+				startGame = false;
+				gameover = false;
+				int result = 0;
+				int oldresult = result;
+				int timewait = 40;
+
+				// Display start menu
+				while (!startGame && !quit)
+				{
+					showStartMenu(gRenderer, gStartMenu);
+					while (SDL_PollEvent(&e) != 0)
+					{
+						switch (e.type)
+						{
+						case SDL_QUIT:
+							startGame = true;
+							quit = true;
+							gameover = true;
+							break;
+
+						// Mouse button pressed
+						case SDL_MOUSEBUTTONDOWN:
+							if (e.button.button == SDL_BUTTON_LEFT)
+							{
+								if (e.motion.x > 240 && e.motion.x < 365 && e.motion.y > 325 && e.motion.y < 435)
+								{
+									startGame = true;
+								}
+								if (e.motion.x > 423 && e.motion.x < 545 && e.motion.y > 325 && e.motion.y < 435)
+								{
+									startGame = true;
+									quit = true;
+									gameover = true;
+								}
+							}
+							break;
+						}
+					}
+				}
+			}
+		}
+	}
 	close();
 
 	return 0;
 }
-
-
-
