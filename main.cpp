@@ -381,7 +381,7 @@ int main(int argc, char *args[])
 											SDL_RenderCopy(gRenderer, gTextureGameOver, NULL, NULL);
 											SDL_RenderPresent(gRenderer);
 											gameover = true;
-											SDL_Delay(7500);
+											SDL_Delay(5000);
 										}
 									}
 									break;
