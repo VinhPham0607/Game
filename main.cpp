@@ -310,6 +310,92 @@ int main(int argc, char *args[])
 						}
 					}
 				}
+
+				if (!quit)
+				{
+					Mix_PlayChannel(-1, gScratch, 100);
+
+					while (!gameover)
+					{
+						table = generateTable(n, numberOfBomb, bombLocatX, bombLocatY);
+						showBombTable(gRenderer, gTextureBox, gTextureGalaxy, gTextureMar, table, n, bombLocatX, bombLocatY, numberOfBomb);
+						showFullTable(gRenderer, gTextureBox, gTextureGalaxy, table, n);
+
+						switchBomb(table, n, bombLocatX, bombLocatY, numberOfBomb, gRenderer, gTextureBox, gTextureGalaxy, timewait);
+						timewait -= 4;
+
+						for (int i = 0; i < numberOfBomb; i++)
+						{
+							printf("bomb locat: %i and %i\n", *(bombLocatX + i), *(bombLocatY + i));
+						}
+
+						while (!quit && !gameover)
+						{
+							while (SDL_PollEvent(&e) != 0)
+							{
+								switch (e.type)
+								{
+								case SDL_QUIT:
+									quit = true;
+									gameover = true;
+									break;
+
+								case SDL_MOUSEBUTTONDOWN:
+									if (e.button.button == SDL_BUTTON_LEFT)
+									{
+										oldresult = result;
+										for (int l = 0; l < numberOfBomb; l++)
+										{
+											int a = *(bombLocatX + l), b = *(bombLocatY + l);
+
+											if (e.motion.x > 140 + b * 140 && e.motion.x < 240 + b * 140 && e.motion.y > 40 + a * 140 && e.motion.y < 140 + a * 140)
+											{
+												result += 1;
+												tmp = l;
+											}
+										}
+										if (result > oldresult)
+										{
+											printf("Correct\n");
+											printf("result %i\n time %i\n", result, timewait);
+											if (timewait <= 20 && result == 2)
+											{
+												showResult(gRenderer, gTextureBox, gTextureGalaxy, gTextureMar, gTextureLevelup, table, n, bombLocatX, bombLocatY, numberOfBomb, result, tmp, timewait);
+												Mix_HaltChannel(-1);
+												Mix_PlayChannel(-1, gWinner, 0);
+												showWinner(gRenderer, gTextureCongrats);
+												SDL_Delay(5000);
+												gameover = true;
+											}
+											else
+											{
+												showResult(gRenderer, gTextureBox, gTextureGalaxy, gTextureMar, gTextureLevelup, table, n, bombLocatX, bombLocatY, numberOfBomb, result, tmp, timewait);
+											}
+										}
+										else if (result == 0 || (result == oldresult && result == 1))
+										{
+											Mix_HaltChannel(-1);
+											showBombTable(gRenderer, gTextureBox, gTextureGalaxy, gTextureMar, table, n, bombLocatX, bombLocatY, numberOfBomb);
+											SDL_Delay(500);
+											Mix_PlayChannel(-1, gGameOver, 0);
+											SDL_RenderCopy(gRenderer, gTextureGameOver, NULL, NULL);
+											SDL_RenderPresent(gRenderer);
+											gameover = true;
+											SDL_Delay(7500);
+										}
+									}
+									break;
+								}
+							}
+							if (result == 2)
+							{
+								SDL_Delay(500);
+								result = 0;
+								break;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
