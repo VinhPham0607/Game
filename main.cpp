@@ -276,6 +276,7 @@ int main(int argc, char *args[])
 				int result = 0;
 				int oldresult = result;
 				int timewait = 40;
+				int timeswitch = 8;
 
 				// Display start menu
 				while (!startGame && !quit)
@@ -321,8 +322,9 @@ int main(int argc, char *args[])
 						showBombTable(gRenderer, gTextureBox, gTextureGalaxy, gTextureMar, table, n, bombLocatX, bombLocatY, numberOfBomb);
 						showFullTable(gRenderer, gTextureBox, gTextureGalaxy, table, n);
 
-						switchBomb(table, n, bombLocatX, bombLocatY, numberOfBomb, gRenderer, gTextureBox, gTextureGalaxy, timewait);
+						switchBomb(table, n, bombLocatX, bombLocatY, numberOfBomb, gRenderer, gTextureBox, gTextureGalaxy, timewait, timeswitch);
 						timewait -= 4;
+						timeswitch += 3;
 
 						for (int i = 0; i < numberOfBomb; i++)
 						{

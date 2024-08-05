@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1722677737 source:c:\users\vinh\documents\github\game\showfull.cpp
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<stdio.h>
+	<string>
+	"showFull.h"
+
+1722566654 c:\users\vinh\documents\github\game\showfull.h
+
+1722826102 source:c:\users\vinh\documents\github\game\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<thread>
+	<chrono>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<stdio.h>
+	<string>
+	<algorithm>
+	<windows.h>
+	"showFull.h"
+	"generate.h"
+
+1722826102 c:\users\vinh\documents\github\game\generate.h
+
