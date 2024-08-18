@@ -1,10 +1,10 @@
 # Finding Star
 
-- Demo game: [https://youtu.be/EyTwTOWr5zU](https://youtu.be/EziCb7U9UbU)
+- Demo game: [https://drive.google.com/file/d/1lw7_BsbGNd98uzzLTWCk6i7mQC34Mf68/view?usp=sharing](https://drive.google.com/file/d/1lw7_BsbGNd98uzzLTWCk6i7mQC34Mf68/view?usp=sharing)
 
 # Giới thiệu game
 
-Finding Star là game bao gồm một bảng gồm 4x4 hộp, bên trong sẽ chứa ngẫu nhiên 2 ngôi sau. Sau khi trò chơi thực hiện đảo ngẫu nhiên vị trí các hộp, người chơi cần chọn đúng 2 hộp có chứa ngôi sao đó. 
+Finding Star là game bao gồm một bảng gồm 4x4 hộp, bên trong sẽ chứa ngẫu nhiên 2 ngôi sao. Sau khi trò chơi thực hiện đảo ngẫu nhiên vị trí các hộp, người chơi cần chọn đúng 2 hộp có chứa ngôi sao đó. 
 
 
 # 0. Cách tải game
@@ -15,7 +15,7 @@ Finding Star là game bao gồm một bảng gồm 4x4 hộp, bên trong sẽ ch
 
 # 1. Bắt đầu game
 
-- Bắt đầu, chương trình hiện start menu bao gôm 2 phím cho người lựa chọn. Phím bên trái cho phép người chơi bắt đầu chơi, phím bên phải cho phép người chơi thoát khỏi trò chơi.
+- Bắt đầu, chương trình hiện start menu bao gồm 2 phím cho người lựa chọn. Phím bên trái cho phép người chơi bắt đầu chơi, phím bên phải cho phép người chơi thoát khỏi trò chơi.
 <div style="text-align: center;">
 
 ![image](assets/start-menu.png)
@@ -32,7 +32,7 @@ Finding Star là game bao gồm một bảng gồm 4x4 hộp, bên trong sẽ ch
 </div>
 
 
-- Nếu người chơi chọn sai hộp hoặc sau khi hết thời gian đếm ngược mà người chơi cho tìm đủ và đúng 2 hộp có chứa ngôi sao. Người chơi sẽ nhận thông báo thua cuộc. 
+- Nếu người chơi chọn sai hộp hoặc sau khi hết thời gian đếm ngược mà người chơi chưa tìm đủ và đúng 2 hộp có chứa ngôi sao. Người chơi sẽ nhận thông báo thua cuộc. 
 <div style="text-align: center;">
 
 ![image](preview/game-over.png)
@@ -79,6 +79,7 @@ Người chơi chỉ cần double click vào hộp muốn chọn. Còn lại m�
 
 - Phông chữ:
     * font: chứa phông chữ sử dụng trong trò chơi.
+- Các tài nguyên sử dụng trong game đều được lấy từ các nguồn trên Internet.
 
 # 4. Những cải tiến đã làm được so với ý tưởng ban đầu
 
