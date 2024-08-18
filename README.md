@@ -15,7 +15,7 @@ Finding Star là game bao gồm một bảng gồm 4x4 hộp, bên trong sẽ ch
 
 # 1. Bắt đầu game
 
-Bắt đầu, chương trình hiện start menu bao gôm 2 phím cho người lựa chọn. Phím bên trái cho phép người chơi bắt đầu chơi, phím bên phải cho phép người chơi thoát khỏi trò chơi.
+- Bắt đầu, chương trình hiện start menu bao gôm 2 phím cho người lựa chọn. Phím bên trái cho phép người chơi bắt đầu chơi, phím bên phải cho phép người chơi thoát khỏi trò chơi.
 <div style="text-align: center;">
 
 ![image](assets/start-menu.png)
@@ -23,7 +23,7 @@ Bắt đầu, chương trình hiện start menu bao gôm 2 phím cho người l�
 </div>
 
 
-Khi người chơi chọn bắt đầu chơi, màn hình hiện bảng gồm 4x4 hộp. Sau đó trò chơi thực hiện tráo đổi ngẫu nhiên các hộp và yêu cầu người chơi tìm ra 2 hộp có chứa 2 ngôi sao. Sẽ có giới hạn thời gian là 10s cho mỗi màn. Đây là khoảng thời gian để người chơi tìm ra 2 hộp đó.
+- Khi người chơi chọn bắt đầu chơi, màn hình hiện bảng gồm 4x4 hộp. Sau đó trò chơi thực hiện tráo đổi ngẫu nhiên các hộp và yêu cầu người chơi tìm ra 2 hộp có chứa 2 ngôi sao. Sẽ có giới hạn thời gian là 10s cho mỗi màn. Đây là khoảng thời gian để người chơi tìm ra 2 hộp đó.
 
 <div style="text-align: center;">
 
@@ -32,7 +32,7 @@ Khi người chơi chọn bắt đầu chơi, màn hình hiện bảng gồm 4x4
 </div>
 
 
-Nếu người chơi chọn sai hộp hoặc sau khi hết thời gian đếm ngược mà người chơi cho tìm đủ và đúng 2 hộp có chứa ngôi sao. Người chơi sẽ nhận thông báo thua cuộc. 
+- Nếu người chơi chọn sai hộp hoặc sau khi hết thời gian đếm ngược mà người chơi cho tìm đủ và đúng 2 hộp có chứa ngôi sao. Người chơi sẽ nhận thông báo thua cuộc. 
 <div style="text-align: center;">
 
 ![image](preview/game-over.png)
@@ -40,7 +40,7 @@ Nếu người chơi chọn sai hộp hoặc sau khi hết thời gian đếm ng
 </div>
 
 
-Nếu người chơi chọn đúng hộp và thời gian đếm ngược vẫn còn. Người chơi sẽ nhận thông báo lên màn. Trò chơi có tổng cộng 5 màn. Màn càng cao thì game càng khó. Khi chiến thắng hết 5 màn. Người chơi sẽ nhận thông báo thắng cuộc. 
+- Nếu người chơi chọn đúng hộp và thời gian đếm ngược vẫn còn. Người chơi sẽ nhận thông báo lên màn. Trò chơi có tổng cộng 5 màn. Màn càng cao thì game càng khó. Khi chiến thắng hết 5 màn. Người chơi sẽ nhận thông báo thắng cuộc. 
 <div style="text-align: center;">
 
 ![image](preview/level-up.png)
@@ -54,7 +54,7 @@ Nếu người chơi chọn đúng hộp và thời gian đếm ngược vẫn c
 </div>
 
 
-Dù người chơi thắng hay thua, thì game sẽ đều đưa người chơi về start menu để có thể cho phép người chơi chơi lại hoặc thoát khỏi trò chơi
+- Dù người chơi thắng hay thua, thì game sẽ đều đưa người chơi về start menu để có thể cho phép người chơi chơi lại hoặc thoát khỏi trò chơi
 
 
 # 2. Cách chơi
